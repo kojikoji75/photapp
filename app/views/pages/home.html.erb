@@ -1,4 +1,16 @@
-<div class="jumbotron">
+<div class="jumbotron center">
   <h1>Hello, world!</h1>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+
+<% if user_signed_in? %>
+#######
+
+<% else %>
+
+<p>
+      <%=link_to "Log in",new_user_session_path,class:"btn btn-default btn-lg" %>
+      <%=link_to "Sign up",new_user_registration_path,class:"btn btn-primary btn-lg" %>
+</p>
+
+<% end %>
+
 </div>
